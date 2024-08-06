@@ -1,1 +1,4 @@
 examples/
+
+# don't track tailwind output until project is ready for submission
+assets/css/output-theme.css
