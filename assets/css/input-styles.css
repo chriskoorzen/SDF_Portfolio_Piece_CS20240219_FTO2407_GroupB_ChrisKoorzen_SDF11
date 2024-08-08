@@ -3,6 +3,34 @@
 @tailwind utilities;
 
 
+/*=== Create Custom Arrow Fade In Look for Sign-up, Log-in links ===*/
+/* Set intitial positioning, and activate transition effects */
+a > span {
+    position: relative;
+    left: 0px;
+    transition: 500ms;
+}
+/* Offset to the left to simulate "fade-in" look */
+a:hover > span {
+    left: -8px;
+}
+/* Insert Double Arrow "after" element */
+/* Hide in default state */
+a > span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    transition: 500ms;
+    right: -8px;
+}
+/* Make visible on hover */
+/* Offset to the right to simulate "fade-in" look */
+a:hover > span::after {
+    opacity: 1;
+    right: -20px;
+}
+
+
 @layer base {
     @font-face {
         font-family: Plus Jakarta Sans;
