@@ -21,11 +21,13 @@
 
     <header class="bg-neutral-100 shadow-md sticky top-0 z-10">
         <div class="max-w-screen-xl mx-auto py-4 px-8 h-16 flex items-center justify-between">
+            
             <div class="h-full md:w-1/3">
                 <a href="">
                     <img class="h-full" src="assets/component-1/navigation/cache-bank-logo-1.png" >
                 </a>
             </div>
+
             <button id="toggleButton" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" width="24" height="24">
                     <path d="M 3 6 H 21 M 3 12 H 21 M 3 18 H 21"
@@ -69,6 +71,7 @@
                     </a>
                 </div>
             </nav>
+
         </div>
     </header>
 
@@ -144,9 +147,10 @@
                     Experience tailored financial solutions, advanced security, and tech-focused support designed just for you.
                 </p>
             </div>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                
-                <div class="rounded-lg shadow-xl p-8 hover:scale-105 transition"> <!-- hover:bg-green-500 hover:text-neutral-50 hover:scale-105 transition -->
+
+            <!--- Feature Cards -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">    
+                <div class="rounded-lg shadow-xl p-8 hover:scale-105 transition">
                     <div class="bg-green-500 rounded-lg p-4 w-fit mx-auto mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path d="M22.8233 8C22.8233 7.28 22.4533 6.65 21.8833 6.3L12.8333 1L3.78331 6.3C3.21331 6.65 2.83331 7.28 2.83331 8V18C2.83331 19.1 3.73331 20 4.83331 20H20.8333C21.9333 20 22.8333 19.1 22.8333 18L22.8233 8ZM20.8233 8V8.01L12.8333 13L4.83331 8L12.8333 3.32L20.8233 8ZM4.83331 18V10.34L12.8333 15.36L20.8233 10.37L20.8333 18H4.83331Z" stroke="white"/>
@@ -235,12 +239,14 @@
                         sharing insights within the software development industry.
                     </p>
                 </div>
-
             </div>
+            
         </section>
 
         <!-- Stats & Getting Started Section -->
         <section id="get-started" class="mt-16 md:mt-32 lg:mt-36">
+            
+            <!-- Statistics -->
             <div id="stats" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 
                 <div class="flex flex-col items-center">
@@ -263,6 +269,7 @@
                     <p>Happy Developers</p>
                 </div>
             </div>
+
             <div class="lg:flex lg:flex-row lg:mt-36">
                 <img class="size-72 mx-auto lg:size-1/2 lg:p-16" src="assets/component-4/getting-started.png">
                 <div class="lg:w-1/2">
@@ -273,6 +280,8 @@
                         Cache Bank simplifies sign-up with a user-friendly website, streamlined account options, 
                         and an efficient verification process, making banking accessible and hassle-free for developers.
                     </p>
+                    
+                    <!--- Sign Up Steps -->
                     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
                         <div>
                             <p class="bg-green-500 mx-auto p-4 size-14 rounded-full text-neutral-50 font-bold text-center mb-2 lg:ml-0">
@@ -311,6 +320,7 @@
                             <p class="text-center lg:text-left">Check your information, agree to terms, and submit for account approval.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -360,6 +370,7 @@
     </main>
 
     <footer class="bg-green-500 mt-24 lg:mt-32 pt-16 pb-16">
+        
         <!-- Social media links -->
         <div class="mx-auto w-56 flex flex-row items-center justify-between lg:w-96">
             <!-- Facebook Logo -->
@@ -410,10 +421,14 @@
             </a>
             
         </div>
+
+        <!-- Disclaimers -->
         <div class="mx-auto w-56 flex flex-row items-center justify-between mt-8">
             <a href="" target="_blank" class="hover:underline">Privacy Policy</a>
             <a href="" target="_blank" class="hover:underline">Terms of Use</a>
         </div>
+
+        <!-- Copyright -->
         <p class="w-fit mx-auto mt-8 font-semibold">
             &copy; 2024 Cache Bank. All rights reserved.
         </p>
