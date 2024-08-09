@@ -1,17 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["index.html"],
   theme: {
     extend: {
-      container: {
-        padding: {
-          DEFAULT: '.75rem',
-          sm: '1rem',
-          lg: '2.5rem',
-          xl: '4.5rem',
-          '2xl': '7rem',
-        },
-      },
       colors: {
         white: '#ffffff',
         black: '#000000',
@@ -221,16 +212,9 @@ module.exports = {
         'placeholder-grey': "#8F9BBA",
 
       },
-      boxShadow: {
-        main: '0px 32px 64px -12px rgba(85, 105, 135, 0.13);',
-      },
       fontFamily: {
         'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],
       },
     },
-    container: {
-      center: true,
-    },
-  },
-  plugins: ['prettier-plugin-tailwindcss'],
+  }
 }
