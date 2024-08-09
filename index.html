@@ -8,26 +8,32 @@
     <title>Cache Bank Landing Page</title>
 
     <!-- Local styles -->
-    <link rel="stylesheet" href="./assets/css/output-theme.css">
+    <link rel="stylesheet" href="assets/css/output-theme.css">
 
     <!-- Numbers animation -->
     <script src="assets/js/countup.min.js"></script>    <!-- Does not get deferred because it only defines classes for use, does not reference DOM elements. -->
+    
+    <!-- Execute these scripts only after DOM is loaded, using "defer" keyword. -->
     <script defer src="assets/js/countto.js"></script>
-
     <script defer src="assets/js/functions.js"></script>
 </head>
 
+<!-- Define general text properties for entire document -->
 <body class="font-plus-jakarta text-grey-900">
 
+    <!-- Set header to stay in place -->
     <header class="bg-neutral-100 shadow-md sticky top-0 z-10">
+        <!-- Never let content go wider than 1280px (max-w-screen-xl prop), stay centered. -->
         <div class="max-w-screen-xl mx-auto py-4 px-8 h-16 flex items-center justify-between">
             
             <div class="h-full md:w-1/3">
+                <!-- Users expect something to happen when clicking a logo > go to home page -->
                 <a href="">
                     <img class="h-full" src="assets/component-1/navigation/cache-bank-logo-1.png" >
                 </a>
             </div>
 
+            <!-- Control Navbar display - not needed when screen is large enough to list options in header -->
             <button id="toggleButton" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" width="24" height="24">
                     <path d="M 3 6 H 21 M 3 12 H 21 M 3 18 H 21"
@@ -39,6 +45,7 @@
                 </svg>
             </button>
             
+            <!-- Main Navigation. Hidden on small screens, otherwise visible. -->
             <nav id="navMenu" 
                 class="hidden absolute top-16 left-0 rounded-md h-fit w-screen bg-neutral-100 
                     md:flex md:static md:rounded-none md:size-full md:items-center md:justify-around md:bg-transparent">
@@ -75,11 +82,14 @@
         </div>
     </header>
 
+    <!-- Never let content go wider than 1280px (max-w-screen-xl prop), stay centered. -->
     <main class="max-w-screen-xl mx-auto px-8">
         
         <!-- Hero Section -->
         <section id="product" class="mt-10 lg:pt-24">
+            <!-- Control content and image display -->
             <div class="lg:flex lg:flex-row lg:mb-36">
+                <!-- Group main content -->
                 <div class="max-w-lg mx-auto">
                     <h1 class="mb-8 text-center font-extrabold leading-tight text-4xl lg:ml-3 lg:text-6xl lg:text-left">
                         The Clever Place to Keep Your Cache
@@ -89,6 +99,7 @@
                         We understand your financial needs are as unique as the code you write. 
                         Our services offer cutting-edge financial solutions that help you take care of your cash.
                     </p>
+                    <!-- Control link layout -->
                     <div class="flex flex-col justify-center items-center sm:flex-row lg:justify-start">
                         <a href="" class="my-2 mx-3 w-fit p-4 rounded-2xl bg-green-500 text-neutral-50 font-semibold hover:bg-pink-500 transition">
                             Join Cache Now
@@ -98,15 +109,18 @@
                         </a>
                     </div>
                 </div>
-                
+                <!-- Hide on exceptionally tiny screens -->
                 <img class="hidden sm:block size-72 lg:size-96 mx-auto" src="assets/component-2/hero-image.png">
             </div>
+            
             <p class="w-fit mx-auto mt-8 mb-6 font-semibold text-lg text-center">
                 Endorsed by global companies like
             </p>
-            
             <!-- Endorsement logos -->
-            <div class="h-12 flex flex-row items-center justify-between sm:h-16 sm:justify-evenly">                
+            <!-- Layout as row, grow slightly on larger screens -->
+            <div class="h-12 flex flex-row items-center justify-between sm:h-16 sm:justify-evenly">
+                <!-- Apply tailwind classes directly on SVG's, combining the "preserveAspectRatio" property and container height to control growth. -->
+                
                 <!-- Amazon Logo -->
                 <svg class="h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64" style="fill: #1b2559">
                     <path d="M 32.376953 7 C 25.650953 7 18.181375 9.5161875 16.609375 17.742188 C 16.441375 18.618188 17.052859 19.067312 17.630859 19.195312 L 24.460938 19.892578 C 25.102937 19.858578 25.614281 19.260906 25.738281 18.628906 C 26.326281 15.794906 28.727922 14.394531 31.419922 14.394531 C 32.873922 14.394531 34.516953 14.940516 35.376953 16.228516 C 36.370953 17.666516 36.207031 19.617203 36.207031 21.283203 L 36.207031 22.232422 C 32.109031 22.688422 26.763641 22.966766 22.931641 24.634766 C 18.503641 26.528766 15.398437 30.392266 15.398438 36.072266 C 15.398438 43.340266 20.044141 47.003906 25.994141 47.003906 C 31.020141 47.003906 33.733281 45.798719 37.613281 41.886719 C 38.895281 43.724719 39.351219 44.630453 41.699219 46.564453 C 42.227219 46.844453 42.891422 46.789047 43.357422 46.373047 L 43.357422 46.4375 C 44.767422 45.1935 47.34125 42.961766 48.78125 41.759766 C 49.35525 41.291766 49.23125 40.561828 48.78125 39.923828 C 47.48925 38.157828 46.164062 36.694062 46.164062 33.414062 L 46.164062 22.544922 C 46.164062 17.926922 46.475109 13.654609 43.037109 10.474609 C 40.323109 7.8986094 35.812953 7 32.376953 7 z M 35.248047 27.835938 C 35.566797 27.841188 35.885078 27.851562 36.205078 27.851562 L 36.205078 29.367188 C 36.207078 32.095187 36.317687 34.337719 34.929688 36.761719 C 33.805687 38.729719 31.997672 39.919922 30.013672 39.919922 C 27.301672 39.919922 25.734375 37.891281 25.734375 34.863281 C 25.734375 29.653281 29.831016 28.141562 34.291016 27.851562 C 34.610016 27.830562 34.929297 27.830687 35.248047 27.835938 z M 54.171875 45.441406 C 52.353875 45.467406 50.22375 45.850422 48.59375 46.982422 C 48.09375 47.330422 48.166656 47.817953 48.722656 47.751953 C 50.556656 47.533953 54.609844 47.021359 55.339844 47.943359 C 56.067844 48.867359 54.533609 52.665281 53.849609 54.363281 C 53.641609 54.875281 54.092547 55.073594 54.560547 54.683594 C 57.612547 52.155594 58.428687 46.912531 57.804688 46.144531 C 57.494687 45.770531 55.991875 45.415406 54.171875 45.441406 z M 6.3671875 46.404297 C 5.9871875 46.454297 5.8363281 46.946688 6.2363281 47.304688 C 13.020328 53.368688 21.967828 57 31.923828 57 C 39.025828 57 47.315859 54.800578 53.005859 50.642578 C 53.945859 49.952578 53.124109 48.888922 52.162109 49.294922 C 45.784109 51.974922 38.815766 53.273437 32.509766 53.273438 C 23.159766 53.273438 14.140266 50.74725 6.8222656 46.53125 C 6.6602656 46.43925 6.4911875 46.388297 6.3671875 46.404297 z"/>
@@ -118,6 +132,7 @@
                 </svg>
 
                 <!-- Nike Logo -->
+                <!-- Does not have same ratios as other logo SVG's, use div to keep in sync.-->
                 <div class="w-16 sm:w-20">
                     <svg class="w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 184 65" fill="none">
                         <path d="M20.2765 64.8827C14.7995 64.6671 10.3185 63.1822 6.81467 60.4243C6.14599 59.8975 4.55259 58.3178 4.01802 57.6515C2.59718 55.8814 1.6312 54.1586 0.986896 52.2472C-0.995712 46.3634 0.0246651 38.6425 3.90547 30.1689C7.22826 22.9145 12.3555 15.7196 21.3007 5.75465C22.6183 4.28833 26.5423 0 26.5676 0C26.577 0 26.3631 0.367039 26.094 0.813998C23.7681 4.67396 21.778 9.22062 20.6939 13.1568C18.9523 19.4727 19.1624 24.8928 21.3091 29.0957C22.79 31.9911 25.3287 34.4991 28.1835 35.8855C33.1813 38.3117 40.4984 38.5124 49.4342 36.4728C50.0494 36.3315 80.535 28.3133 117.18 18.6541C153.826 8.99389 183.814 1.09648 183.818 1.10298C183.828 1.11136 98.6805 37.2115 54.4788 55.9399C47.4788 58.905 45.6068 59.654 42.3159 60.7988C33.9034 63.7258 26.3678 65.1224 20.2765 64.8827Z" fill="#1B2559"/>
@@ -138,6 +153,7 @@
 
         <!-- Features Section -->
         <section id="features" class="mt-16 md:mt-32 lg:mt-44">
+            
             <div class="max-w-3xl mx-auto md:mb-16 lg:mb-24">
                 <h1 class="mb-8 text-center font-extrabold leading-tight text-4xl">
                     Elevate Your Banking with Cache
@@ -149,7 +165,9 @@
             </div>
 
             <!--- Feature Cards -->
+            <!-- Grid column 1 for tiny screens, 2 for fat screens, 3 for large desktop displays. -->
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">    
+                <!-- Scale on hover + transition to create grow effect -> emphasis for user on the card they're focusing on -->
                 <div class="rounded-lg shadow-xl p-8 hover:scale-105 transition">
                     <div class="bg-green-500 rounded-lg p-4 w-fit mx-auto mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -240,7 +258,6 @@
                     </p>
                 </div>
             </div>
-            
         </section>
 
         <!-- Stats & Getting Started Section -->
@@ -270,9 +287,12 @@
                 </div>
             </div>
 
+            <!-- Activate flex styling on large screens only -->
             <div class="lg:flex lg:flex-row lg:mt-36">
+                <!-- Allow image to occupy half of container size on large screens -->
                 <img class="size-72 mx-auto lg:size-1/2 lg:p-16" src="assets/component-4/getting-started.png">
                 <div class="lg:w-1/2">
+                    
                     <h1 class="mb-8 text-center font-extrabold leading-tight text-4xl lg:text-left">
                         How Cache Works?
                     </h1>
@@ -282,6 +302,7 @@
                     </p>
                     
                     <!--- Sign Up Steps -->
+                    <!-- Grid column 1 on tiny screens, otherwise set as pairs. -->
                     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
                         <div>
                             <p class="bg-green-500 mx-auto p-4 size-14 rounded-full text-neutral-50 font-bold text-center mb-2 lg:ml-0">
@@ -320,13 +341,15 @@
                             <p class="text-center lg:text-left">Check your information, agree to terms, and submit for account approval.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
+        <!-- Minimal content so "section" itself used as layout container -->
         <section id="contact" class="mt-16 md:mt-32 flex flex-col gap-12 items-center lg:flex-row lg:justify-center">
+
+
             <div class="flex flex-col gap-4 justify-center items-center pt-4 pb-8 rounded-lg shadow-2xl w-80">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                     <path d="M31.9904 13.965L22.4166 4.40166C21.6057 3.60976 20.5294 3.16817 19.4104 3.16817C18.2914 3.16817 17.2151 3.60976 16.4041 4.40166L6.8304 13.9017C6.40502 14.283 6.0629 14.7524 5.82645 15.279C5.58999 15.8056 5.46454 16.3776 5.45831 16.9575V30.5425C5.47456 31.6946 5.93476 32.793 6.73808 33.5973C7.5414 34.4016 8.62236 34.846 9.74415 34.8333H28.9225C30.0443 34.846 31.1252 34.4016 31.9285 33.5973C32.7319 32.793 33.1921 31.6946 33.2083 30.5425V16.9575C33.2071 16.4009 33.0989 15.85 32.8899 15.3365C32.6809 14.823 32.3752 14.3569 31.9904 13.965ZM18.47 6.68166C18.7058 6.46025 19.0138 6.33747 19.3333 6.33747C19.6528 6.33747 19.9608 6.46025 20.1966 6.68166L28.5833 15.0417L20.1504 23.4017C19.9146 23.6231 19.6066 23.7459 19.2871 23.7459C18.9675 23.7459 18.6596 23.6231 18.4237 23.4017L10.0833 15.0417L18.47 6.68166ZM30.125 30.5425C30.1052 30.8533 29.9688 31.144 29.7445 31.3537C29.5203 31.5633 29.2256 31.6755 28.9225 31.6667H9.74415C9.44102 31.6755 9.14636 31.5633 8.9221 31.3537C8.69785 31.144 8.56147 30.8533 8.54165 30.5425V17.9708L14.7854 24.1458L12.2262 26.6792C11.9391 26.9758 11.7779 27.3771 11.7779 27.7954C11.7779 28.2137 11.9391 28.615 12.2262 28.9117C12.3695 29.066 12.5417 29.1891 12.7324 29.2734C12.9232 29.3578 13.1286 29.4017 13.3362 29.4025C13.7332 29.4009 14.1142 29.2421 14.4 28.9592L17.1287 26.2675C17.8065 26.6928 18.5853 26.9179 19.3796 26.9179C20.1738 26.9179 20.9527 26.6928 21.6304 26.2675L24.3591 28.9592C24.6449 29.2421 25.026 29.4009 25.4229 29.4025C25.6306 29.4017 25.8359 29.3578 26.0267 29.2734C26.2174 29.1891 26.3896 29.066 26.5329 28.9117C26.82 28.615 26.9812 28.2137 26.9812 27.7954C26.9812 27.3771 26.82 26.9758 26.5329 26.6792L23.9583 24.1458L30.125 17.9708V30.5425Z" fill="#22c55e"/>
@@ -373,6 +396,7 @@
         
         <!-- Social media links -->
         <div class="mx-auto w-56 flex flex-row items-center justify-between lg:w-96">
+            <!-- Use scale + hover and transition for nice grow effect, darker on hover -->
             <!-- Facebook Logo -->
             <a href="https://facebook.com" target="_blank" class="hover:scale-125 hover:text-black transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none">
