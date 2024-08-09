@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/output-theme.css">
 
     <!-- Numbers animation -->
-    <script src="assets/js/countup.min.js"></script>
+    <script src="assets/js/countup.min.js"></script>    <!-- Does not get deferred because it only defines classes for use, does not reference DOM elements. -->
     <script defer src="assets/js/countto.js"></script>
 
     <script defer src="assets/js/functions.js"></script>
@@ -22,7 +22,9 @@
     <header class="bg-neutral-100 shadow-md sticky top-0 z-10">
         <div class="max-w-screen-xl mx-auto py-4 px-8 h-16 flex items-center justify-between">
             <div class="h-full md:w-1/3">
-                <img class="h-full" src="assets/component-1/navigation/cache-bank-logo-1.png" >
+                <a href="">
+                    <img class="h-full" src="assets/component-1/navigation/cache-bank-logo-1.png" >
+                </a>
             </div>
             <button id="toggleButton" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" width="24" height="24">
@@ -409,8 +411,8 @@
             
         </div>
         <div class="mx-auto w-56 flex flex-row items-center justify-between mt-8">
-            <a href="" target="_blank">Privacy Policy</a>
-            <a href="" target="_blank">Terms of Use</a>
+            <a href="" target="_blank" class="hover:underline">Privacy Policy</a>
+            <a href="" target="_blank" class="hover:underline">Terms of Use</a>
         </div>
         <p class="w-fit mx-auto mt-8 font-semibold">
             &copy; 2024 Cache Bank. All rights reserved.
