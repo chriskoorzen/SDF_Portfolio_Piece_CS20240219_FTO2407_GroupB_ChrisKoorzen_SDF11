@@ -12,7 +12,7 @@ a > span {
 }
 /* Offset to the left to simulate "fade-in" look */
 a:hover > span {
-    left: -8px;
+    left: -5px;
 }
 /* Insert Double Arrow "after" element */
 /* Hide in default state */
@@ -27,7 +27,7 @@ a > span::after {
 /* Offset to the right to simulate "fade-in" look */
 a:hover > span::after {
     opacity: 1;
-    right: -20px;
+    right: -18px;
 }
 
 
