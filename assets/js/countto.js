@@ -36,12 +36,15 @@ function runNumbers(entries){
   }
 
   counts.forEach((countUp) => {
-        if (!countUp.error) {
-          countUp.start();
-        } else {
-          console.error(countUp.error);
-        }
-    });
+    if (!countUp.error) {
+      countUp.start();
+    } else {
+      console.error(countUp.error);
+    }
+  });
+  
+  // when finished, disconnect. For performance
+  observer.disconnect();
 }
 
 // Add in intersection observer
